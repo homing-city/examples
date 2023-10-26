@@ -6,4 +6,4 @@
 
 小程序预览码：
 
-![homing_wechat_qrcode](https://raw.githubusercontent.com/homing-city/examples/main/images/example/homing_wechat_qrcode.jpg)
+![homing_wechat_qrcode](https://github.com/homing-city/examples/blob/main/images/homing_wechat_qrcode.jpg)
