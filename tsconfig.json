@@ -1,0 +1,10 @@
+{
+  "extends": "@lough/tsconfig/typescript",
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["ESNext", "DOM"],
+    "types": ["miniprogram-api-typings"],
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}

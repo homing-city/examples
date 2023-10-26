@@ -1,0 +1,39 @@
+{
+  "name": "homing-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "husky install",
+    "lint:es": "eslint -c .eslintrc.js --ext .ts,.tsx ./",
+    "lint:es-fix": "eslint --fix -c .eslintrc.js --ext .ts,.tsx ./",
+    "lint:style": "stylelint --config .stylelintrc.js ./**/*.{css,less,scss,styl}",
+    "lint:style-fix": "stylelint --fix --config .stylelintrc.js ./**/*.{css,less,scss,styl}",
+    "lint": "npm run lint:es && npm run lint:style",
+    "lint-fix": "npm run lint:es-fix && npm run lint:style-fix",
+    "scan": "node ./scripts/scan.mjs"
+  },
+  "devDependencies": {
+    "@lough/commitlint-config": "^0.1.3",
+    "@lough/eslint-config": "^0.1.6",
+    "@lough/npm-operate": "^0.3.1",
+    "@lough/stylelint-config": "^0.1.4",
+    "@lough/tsconfig": "^0.0.5",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "miniprogram-api-typings": "^2.8.3-1",
+    "prettier": "^2.8.4",
+    "typescript": "^5.1.6"
+  },
+  "private": true,
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint -c .eslintrc.js --ext .ts,.tsx"
+    ],
+    "*.{css,less,scss,styl}": [
+      "stylelint --config .stylelintrc.js *.{css,less,scss,styl}"
+    ]
+  },
+  "dependencies": {
+    "@homing/wechat": "^1.0.0",
+    "homing": "^1.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "pages": ["pages/index/index", "pages/native/index"],
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#00BCD4",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Homing"
+      },
+      {
+        "pagePath": "pages/native/index",
+        "text": "WeChat"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Homing",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

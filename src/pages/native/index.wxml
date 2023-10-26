@@ -1,0 +1,21 @@
+<view>
+  <view class="controls">
+    <button bind:tap="addUsable100">新增可用券(100)</button>
+    <button bind:tap="addUsable1000">新增可用券(1000)</button>
+    <button bind:tap="updateUsable">更新可用券(1)</button>
+    <button bind:tap="updateUsableAll">更新可用券(all)</button>
+    <button bind:tap="deleteUsable">删除可用券(1)</button>
+    <button bind:tap="deleteUsableAll">删除可用券(all)</button>
+    <button bind:tap="addInvalidLot1000">新增不可用券(1000)</button>
+    <button bind:tap="addInvalidLot5000">新增不可用券(5000)</button>
+    <button bind:tap="toggleList">切换到{{invalid?'可用券':'不可用券'}}</button>
+  </view>
+  <view class="coupon-list" wx:if="{{!invalid}}">
+    <view class="title">可用券列表({{usableList.length}})</view>
+    <coupon info="{{item}}" mpxPageStatus="{{mpxPageStatus}}" wx:for="{{usableList}}" wx:key="id"></coupon>
+  </view>
+  <view class="coupon-list" wx:else>
+    <view class="title">不可用券列表({{invalidList.length}})</view>
+    <coupon info="{{item}}" mpxPageStatus="{{mpxPageStatus}}" wx:for="{{invalidList}}" wx:key="id"></coupon>
+  </view>
+</view>
