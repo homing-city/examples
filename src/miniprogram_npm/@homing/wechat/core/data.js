@@ -106,14 +106,13 @@ const updateData = (instance, observer) => {
   }
   if (!changedInstance.size) {
     setTimeout(() => {
-      //console.log('changedInstance', Array.from(changedInstance))
-      console.time('updateData');
+      // console.time('updateData');
       changedInstance.forEach(_instance => {
         if (_instance.__changedObservers) {
           const changeTrace = getMpInstanceChangeTrace(_instance, _instance.__changedObservers);
           const change = getMpInstanceChange(_instance, changeTrace);
           if (change) {
-            console.log('[change]', _instance.is, change);
+            // console.log('[change]', _instance.is, change);
             _instance.setData(change, () => {
               if (_instance.realCallback?.length) {
                 _instance.realCallback.forEach(fn => {
@@ -128,7 +127,7 @@ const updateData = (instance, observer) => {
       });
       changedInstance.clear();
       homing.Observer.clearChange();
-      console.timeEnd('updateData');
+      // console.timeEnd('updateData');
     }, 16);
   }
   instance.__changedObservers.add(observer);

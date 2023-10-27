@@ -1,5 +1,5 @@
 {
-  "name": "homing-demo",
+  "name": "homing-examples",
   "version": "1.0.0",
   "scripts": {
     "prepare": "husky install",
@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@homing/wechat": "^1.0.0",
-    "homing": "^1.0.0"
+    "@homing/wechat": "^1.0.1",
+    "homing": "^1.0.1"
   }
 }

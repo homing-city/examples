@@ -34,5 +34,6 @@
   "packOptions": {
     "ignore": [],
     "include": []
-  }
+  },
+  "projectname": "examples"
 }
