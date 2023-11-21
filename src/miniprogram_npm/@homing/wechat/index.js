@@ -72,9 +72,7 @@ const observerPageParams = params => {
       handles.push(() => {
         const state = fn();
         homing.Observer.end();
-        if (state) {
-          this.data[key] = state;
-        }
+        this.data[key] = state;
       });
     }
     reactionCleanups.push(...handles.map(handle => {
@@ -172,9 +170,7 @@ const observerComponentParams = params => {
       handles.push(() => {
         const state = fn();
         homing.Observer.end();
-        if (state) {
-          this.data[key] = state;
-        }
+        this.data[key] = state;
       });
     }
     reactionCleanups.push(...handles.map(handle => {

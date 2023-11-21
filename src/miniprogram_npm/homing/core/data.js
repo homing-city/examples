@@ -7,8 +7,13 @@ var index = require('../utils/index.js');
 var observable = require('./observable.js');
 
 const objectObservable = (target, observer) => {
+  let _proxy = null;
   const proxy = new Proxy(target, {
     get(v, key) {
+      const _get = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(target), key)?.get;
+      if (_get) {
+        return _get.call(_proxy);
+      }
       observer.collect(key);
       return observable.observable(target[key], key, observer);
     },
@@ -39,6 +44,7 @@ const objectObservable = (target, observer) => {
       return true;
     }
   });
+  _proxy = proxy;
   return proxy;
 };
 const methodsToProxy = ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'];
