@@ -37,7 +37,7 @@ export declare const observerPage: <T extends ObservableTarget<WechatMiniprogram
  * 观察组件
  * @description 将组件转为响应式
  */
-export declare const observerComponent: <T extends ObservableTarget<WechatMiniprogram.Page.Constructor>>(target: T) => T;
+export declare const observerComponent: <T extends ObservableTarget<WechatMiniprogram.Component.Constructor>>(target: T) => T;
 /**
  * 响应式页面
  */

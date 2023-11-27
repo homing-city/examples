@@ -209,7 +209,7 @@ const observerPage = target => {
 const observerComponent = target => {
   if (target[index.OBSERVER_KEY]) return target;
   const component = function (params) {
-    return target(observerPageParams(params));
+    return target(observerComponentParams(params));
   };
   return Object.defineProperty(component, index.OBSERVER_KEY, {
     configurable: true,

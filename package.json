@@ -1,6 +1,6 @@
 {
   "name": "homing-examples",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "prepare": "husky install",
     "lint:es": "eslint -c .eslintrc.js --ext .ts,.tsx ./",
@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@homing/wechat": "^1.0.2",
+    "@homing/wechat": "^1.0.3",
     "homing": "^1.0.2"
   }
 }
