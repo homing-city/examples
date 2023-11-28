@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@homing/wechat": "^1.0.3",
+    "@homing/wechat": "^1.1.0",
     "homing": "^1.0.2"
   }
 }
